@@ -9,27 +9,16 @@ export const CapCutLogo = ({ className = "w-8 h-8" }: { className?: string }) =>
 )
 
 export const Navbar: React.FC = () => {
-  const navLinks = ["Products", "Features", "Blog", "Templates", "Discover"];
   return (
-    <nav className="w-full bg-white sticky top-0 z-50">
+    <nav className="w-full bg-black/80 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
       <div className="max-w-[1600px] mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-8 lg:gap-12">
-          <div className="flex items-center gap-2 text-2xl font-black tracking-tight text-black cursor-pointer">
-            <CapCutLogo />
-            CapCut
-          </div>
-          <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <button key={link} className="flex items-center gap-1 text-[15px] text-gray-800 font-medium hover:text-black transition-colors">
-                {link} <ChevronDown className="w-4 h-4 text-gray-400" />
-              </button>
-            ))}
-          </div>
+        <div className="flex items-center gap-2 text-2xl font-black tracking-tight text-white cursor-pointer">
+          <CapCutLogo className="w-8 h-8 text-white" />
+          CapCut
         </div>
         <div className="flex items-center gap-4">
-          <button className="text-[15px] font-medium text-gray-800 hover:text-black hidden sm:block px-2">Log in</button>
-          <button className="bg-black text-white px-6 py-2 rounded-full text-[15px] font-medium hover:bg-gray-800 transition-colors">
-            Sign up
+          <button className="bg-white text-black px-6 py-2 rounded-full text-[15px] font-bold hover:bg-gray-200 transition-colors">
+            Get CapCut
           </button>
         </div>
       </div>

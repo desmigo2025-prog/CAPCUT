@@ -32,12 +32,12 @@ const features = [
 
 export const FeaturesSection: React.FC = () => {
   return (
-    <section className="py-24 px-4 bg-[#f9fafb] relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-purple-500/10 blur-[150px] rounded-full mix-blend-multiply"></div>
+    <section className="py-24 px-4 bg-[#050505] relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-purple-600/10 blur-[150px] rounded-full"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black mb-6 text-gray-900 pb-2">Everything you need to go viral.</h2>
+          <h2 className="text-3xl md:text-5xl font-black mb-6 text-white pb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Everything you need to go viral.</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -48,13 +48,13 @@ export const FeaturesSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+              className="bg-gray-900/40 border border-white/10 rounded-3xl p-8 hover:bg-gray-800/60 transition-colors group"
             >
-              <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-900 mb-6 border border-gray-100 group-hover:border-[#00F2DC] group-hover:text-[#00F2DC] transition-colors">
+              <div className="w-14 h-14 bg-gradient-to-br from-gray-800 to-black rounded-2xl flex items-center justify-center text-white mb-6 border border-white/5 group-hover:border-[#00F2DC]/50 group-hover:text-[#00F2DC] transition-colors">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
@@ -65,11 +65,11 @@ export const FeaturesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 rounded-3xl p-8 flex flex-col justify-center items-center text-center hover:from-cyan-100 transition-colors"
+            className="bg-gradient-to-br from-[#2563EB]/20 to-purple-900/20 border border-blue-500/30 rounded-3xl p-8 flex flex-col justify-center items-center text-center hover:from-[#2563EB]/30 transition-colors"
           >
-             <h3 className="text-2xl font-bold text-gray-900 mb-2">And much more</h3>
-             <p className="text-gray-600 mb-6">Explore thousands of free assets.</p>
-             <button className="bg-black text-white font-bold px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
+             <h3 className="text-2xl font-bold text-white mb-2">And much more</h3>
+             <p className="text-blue-200 mb-6">Explore thousands of free assets.</p>
+             <button className="bg-white text-black font-bold px-6 py-3 rounded-full hover:bg-gray-200 transition-colors">
                Get CapCut Free
              </button>
           </motion.div>
