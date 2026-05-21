@@ -13,15 +13,18 @@ import { FinalCTASection } from './components/FinalCTASection';
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen text-slate-50 font-sans antialiased selection:bg-[#00F2DC] selection:text-black scroll-smooth">
+    <div className="bg-white min-h-screen text-gray-900 font-sans antialiased selection:bg-black selection:text-white scroll-smooth overflow-x-hidden">
       <Navbar />
       <main>
         <HeroSection />
-        <ProblemSolutionSection />
-        <FeaturesSection />
-        <BeforeAfterSection />
-        <SocialProofSection />
-        <FinalCTASection />
+        {/* We keep the darker sections as contrasting thematic blocks below the fold, updating their paddings to flow well from the light hero */}
+        <div className="mt-32">
+          <ProblemSolutionSection />
+          <FeaturesSection />
+          <BeforeAfterSection />
+          <SocialProofSection />
+          <FinalCTASection />
+        </div>
       </main>
     </div>
   );

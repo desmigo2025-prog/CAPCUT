@@ -25,11 +25,11 @@ const testimonials = [
 
 export const SocialProofSection: React.FC = () => {
   return (
-    <section className="py-24 px-4 bg-black border-y border-white/5 relative">
+    <section className="py-24 px-4 bg-white border-y border-gray-100 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black mb-6 text-white">Used by over <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#00F2DC]">500 Million</span> creators.</h2>
-          <p className="text-gray-400 text-lg">Join the fastest growing community of mobile editors.</p>
+          <h2 className="text-3xl md:text-5xl font-black mb-6 text-gray-900">Used by over <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[#00d0be]">500 Million</span> creators.</h2>
+          <p className="text-gray-500 text-lg">Join the fastest growing community of mobile editors.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -40,16 +40,16 @@ export const SocialProofSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-gray-900/50 border border-gray-800 p-8 rounded-3xl"
+              className="bg-gray-50 border border-gray-200 p-8 rounded-3xl"
             >
               <div className="flex text-yellow-400 mb-4">
                 {[1,2,3,4,5].map(star => <Star key={star} className="w-5 h-5 fill-current" />)}
               </div>
-              <p className="text-white text-lg font-medium mb-6">"{t.content}"</p>
+              <p className="text-gray-900 text-lg font-medium mb-6">"{t.content}"</p>
               <div className="flex items-center gap-4">
-                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-cover bg-gray-800" />
+                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-cover bg-gray-200" />
                 <div>
-                  <div className="text-white font-bold">{t.name}</div>
+                  <div className="text-gray-900 font-bold">{t.name}</div>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
               </div>
@@ -58,10 +58,9 @@ export const SocialProofSection: React.FC = () => {
         </div>
         
         <div className="mt-16 flex justify-center items-center gap-8 flex-wrap opacity-50 grayscale select-none pointer-events-none">
-           {/* Mock logos of app stores or review sites could go here. We'll use text for now. */}
-           <span className="text-2xl font-bold font-sans">App Store Winner</span>
-           <span className="text-2xl font-bold font-sans">Google Play Best Of</span>
-           <span className="text-2xl font-bold font-sans">#1 Top Free App</span>
+           <span className="text-2xl font-bold font-sans text-gray-800">App Store Winner</span>
+           <span className="text-2xl font-bold font-sans text-gray-800">Google Play Best Of</span>
+           <span className="text-2xl font-bold font-sans text-gray-800">#1 Top Free App</span>
         </div>
       </div>
     </section>

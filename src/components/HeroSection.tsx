@@ -1,110 +1,88 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Button } from './Button';
-import { Star } from 'lucide-react';
+import { CapCutLogo } from './Navbar';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 px-4 overflow-hidden">
-      {/* Background Neon Effects */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/30 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
-      
-      <div className="z-10 flex flex-col items-center max-w-4xl mx-auto text-center mt-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 mb-8 border rounded-full border-white/20 bg-white/5 backdrop-blur-sm"
-        >
-          <span className="flex items-center text-yellow-400">
-            <Star className="w-4 h-4 fill-current" />
-            <Star className="w-4 h-4 fill-current" />
-            <Star className="w-4 h-4 fill-current" />
-            <Star className="w-4 h-4 fill-current" />
-            <Star className="w-4 h-4 fill-current" />
-          </span>
-          <span className="text-sm font-medium text-gray-300">4.9 • 10M+ Reviews</span>
-        </motion.div>
-
+    <>
+    <section className="pt-20 pb-16 px-6 max-w-[1600px] mx-auto flex flex-col lg:flex-row items-center gap-12 text-black relative">
+      {/* Main Title */}
+      <div className="flex-1 lg:max-w-md w-full text-center lg:text-left z-10">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-6 text-5xl font-black tracking-tight text-transparent sm:text-6xl md:text-8xl bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-500"
+          className="text-5xl sm:text-6xl md:text-[5.5rem] font-black tracking-tight text-gray-900 leading-[1.05]"
         >
-          Turn Any Video Into <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F2DC] to-[#2563EB]">Viral Content</span> in Seconds
+          Smart Editor & <br className="hidden lg:block" />Generator
         </motion.h1>
-
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-2xl text-xl text-gray-400 md:text-2xl mb-10"
-        >
-          Edit like a pro with CapCut — no skills needed. AI-powered tools, trending effects, and one-tap exports.
-        </motion.p>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col w-full gap-4 sm:flex-row sm:w-auto"
-        >
-          <Button icon="apple" size="lg" className="w-full sm:w-auto">
-            Download on App Store
-          </Button>
-          <Button icon="play" variant="outline" size="lg" className="w-full sm:w-auto">
-            Get it on Google Play
-          </Button>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-6 text-sm text-gray-500"
-        >
-          100% Free to use. Endless creativity.
-        </motion.p>
       </div>
 
-      {/* Video Preview Mockup */}
+      {/* Central Workspace Mockup */}
       <motion.div 
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 50 }}
-        className="relative w-full max-w-[320px] sm:max-w-md mt-16 z-10 perspective-1000"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.1 }}
+        className="flex-[2] flex flex-col items-center w-full max-w-4xl lg:max-w-none z-10"
       >
-        <div className="relative rounded-[2.5rem] border-[8px] border-gray-900 bg-black aspect-[9/19] overflow-hidden shadow-2xl shadow-blue-500/20 transform rotate-y-[-5deg] rotate-x-[5deg]">
-          <div className="absolute top-0 w-full h-7 bg-black z-20 flex justify-center">
-             <div className="w-1/3 h-6 bg-gray-900 rounded-b-xl"></div>
-          </div>
-          {/* Animated editing preview substitute */}
-          <div className="absolute inset-0 bg-gray-900">
-             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-50 z-0"></div>
+        <div className="w-full bg-[#f6f8fa] rounded-[32px] p-6 sm:p-10 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center justify-center relative overflow-hidden">
+          
+          <div className="relative w-full max-w-[600px] aspect-[16/9] bg-[#cba9fd] rounded flex items-end shadow-2xl overflow-hidden ring-2 ring-[#00F2DC]">
+             {/* Bounding box resize handles (simulated) */}
+             <div className="absolute top-0 left-0 w-2.5 h-2.5 bg-white border border-[#00F2DC] rounded-full -translate-x-1/2 -translate-y-1/2 z-20"></div>
+             <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-white border border-[#00F2DC] rounded-full translate-x-1/2 -translate-y-1/2 z-20"></div>
+             <div className="absolute bottom-0 left-0 w-2.5 h-2.5 bg-white border border-[#00F2DC] rounded-full -translate-x-1/2 translate-y-1/2 z-20"></div>
+             <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-white border border-[#00F2DC] rounded-full translate-x-1/2 translate-y-1/2 z-20"></div>
+             <div className="absolute top-0 left-1/2 w-2 h-2 bg-white border border-[#00F2DC] rounded-full -translate-x-1/2 -translate-y-1/2 z-20"></div>
+             <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-white border border-[#00F2DC] rounded-full -translate-x-1/2 translate-y-1/2 z-20"></div>
+             <div className="absolute top-1/2 left-0 w-2 h-2 bg-white border border-[#00F2DC] rounded-full -translate-x-1/2 -translate-y-1/2 z-20"></div>
+             <div className="absolute top-1/2 right-0 w-2 h-2 bg-white border border-[#00F2DC] rounded-full translate-x-1/2 -translate-y-1/2 z-20"></div>
+
+             {/* Inner Image Content */}
+             <img 
+               src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200&auto=format&fit=crop" 
+               alt="Perfume bottle template"
+               className="absolute right-0 bottom-0 top-0 h-full w-[80%] object-cover object-left mix-blend-multiply opacity-90" 
+             />
              
-             {/* Fake UI Overlay */}
-             <div className="absolute bottom-10 left-4 right-4 bg-black/60 backdrop-blur-md rounded-xl p-4 border border-white/10 z-10">
-               <div className="h-2 w-full bg-gray-800 rounded-full mb-3 overflow-hidden">
-                 <motion.div 
-                    initial={{ width: "0%" }}
-                    animate={{ width: "100%" }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                    className="h-full bg-gradient-to-r from-[#00F2DC] to-[#2563EB]"
-                 />
-               </div>
-               <div className="flex justify-between gap-2">
-                 {[1,2,3,4].map(i => (
-                   <div key={i} className="flex-1 h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/5">
-                     <div className="w-4 h-4 bg-white/30 rounded sm"></div>
-                   </div>
-                 ))}
-               </div>
+             <div className="relative z-10 w-full p-8 flex justify-start items-end h-full">
+                <div className="bg-black text-white px-6 py-2.5 font-bold tracking-widest text-sm shadow-xl">
+                  BLACK FRIDAY
+                </div>
              </div>
           </div>
+
         </div>
+        
+        <p className="mt-8 text-gray-500 text-center max-w-[600px] text-[17px] leading-relaxed font-medium">
+          Create professional designs with AI online. Generate layouts for social media posts, covers, and marketing materials automatically—easy and free.
+        </p>
       </motion.div>
+
+      {/* Right Text Sidebar */}
+      <div className="hidden xl:flex flex-1 flex-col gap-4 font-black text-[2.5rem] leading-tight whitespace-nowrap pl-4 z-10">
+         <div className="text-gray-300 hover:text-gray-900 transition-colors duration-300 cursor-pointer">AI image generator</div>
+         <div className="text-gray-200 hover:text-gray-900 transition-colors duration-300 cursor-pointer">AI video generator</div>
+         <div className="text-gray-100 hover:text-gray-900 transition-colors duration-300 cursor-pointer">Text to Speech</div>
+      </div>
     </section>
+
+    {/* Floating Bottom Action Bar */}
+    <motion.div 
+      initial={{ y: 100, opacity: 0, x: "-50%" }}
+      animate={{ y: 0, opacity: 1, x: "-50%" }}
+      transition={{ delay: 0.3, type: "spring", stiffness: 100, damping: 20 }}
+      className="fixed bottom-8 left-1/2 z-50 flex items-center justify-between gap-6 bg-gradient-to-r from-cyan-100 via-cyan-300 to-cyan-400 rounded-full p-2 pl-3 sm:pl-6 shadow-[0_20px_40px_rgba(0,242,220,0.3)] w-[90%] max-w-[500px]"
+    >
+      <div className="flex items-center gap-3">
+         <div className="bg-white p-2 rounded-full hidden sm:block shadow-sm">
+            <CapCutLogo className="w-5 h-5 text-black" />
+         </div>
+         <span className="font-bold text-gray-900 sm:text-lg pl-3 sm:pl-0 truncate">Edit smarter, create faster</span>
+      </div>
+      <button className="bg-[#111] text-white px-6 sm:px-8 py-3.5 rounded-full font-bold hover:bg-black hover:scale-105 active:scale-95 transition-all text-sm whitespace-nowrap shadow-lg flex-shrink-0">
+        Try online for free
+      </button>
+    </motion.div>
+    </>
   );
 };
