@@ -17,9 +17,9 @@ export const FinalCTASection: React.FC = () => {
            whileInView={{ opacity: 1, scale: 1 }}
            viewport={{ once: true }}
            transition={{ duration: 0.5 }}
-           className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider text-white uppercase bg-red-600 rounded-full"
+           className="inline-block px-5 py-2 mb-8 text-sm font-black tracking-widest text-[#00F2DC] uppercase bg-black border border-[#00F2DC]/50 rounded-full shadow-[0_0_30px_rgba(0,242,220,0.4)] relative overflow-hidden mt-6"
         >
-           Trending App This Week
+           <span className="animate-pulse">Unlock 100% Free Tools</span>
         </motion.div>
         
         <motion.h2 
