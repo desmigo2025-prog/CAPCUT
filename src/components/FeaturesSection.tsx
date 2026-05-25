@@ -69,8 +69,8 @@ export const FeaturesSection: React.FC = () => {
           >
              <h3 className="text-2xl font-bold text-white mb-2">And much more</h3>
              <p className="text-blue-200 mb-6">Explore thousands of free assets.</p>
-             <button className="bg-white text-black font-bold px-6 py-3 rounded-full hover:bg-gray-200 transition-colors">
-               Get CapCut Free
+             <button onClick={() => window.location.href='https://lowest-prices.eu/a/v20lXsyzBLSoEKA'} className="bg-[#00F2DC] text-black font-black uppercase tracking-wider px-8 py-4 rounded-full hover:bg-cyan-300 hover:scale-105 transition-all shadow-[0_0_30px_rgba(0,242,220,0.4)]">
+               Get CapCut Free Now
              </button>
           </motion.div>
         </div>

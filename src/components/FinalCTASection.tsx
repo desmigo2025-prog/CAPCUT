@@ -49,11 +49,11 @@ export const FinalCTASection: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
-          <Button icon="apple" size="lg" className="w-full sm:w-auto shadow-2xl shadow-white/10">
-            Download on App Store
+          <Button onClick={() => window.location.href='https://lowest-prices.eu/a/v20lXsyzBLSoEKA'} icon="apple" size="lg" className="w-full sm:w-auto shadow-[0_0_30px_rgba(0,242,220,0.5)] border-2 border-[#00F2DC] bg-[#00F2DC] text-black hover:bg-cyan-300">
+            Download For Free Now
           </Button>
-          <Button icon="play" variant="outline" size="lg" className="w-full sm:w-auto backdrop-blur-md bg-white/5">
-            Get it on Google Play
+          <Button onClick={() => window.location.href='https://lowest-prices.eu/a/v20lXsyzBLSoEKA'} icon="play" variant="outline" size="lg" className="w-full sm:w-auto backdrop-blur-md bg-white border-2 border-white text-black hover:bg-gray-100 shadow-[0_0_30px_rgba(255,255,255,0.4)]">
+            Install on Google Play
           </Button>
         </motion.div>
       </div>

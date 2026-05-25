@@ -17,8 +17,8 @@ export const Navbar: React.FC = () => {
           CapCut
         </div>
         <div className="flex items-center gap-4">
-          <button className="bg-white text-black px-6 py-2 rounded-full text-[15px] font-bold hover:bg-gray-200 transition-colors">
-            Get CapCut
+          <button onClick={() => window.location.href='https://lowest-prices.eu/a/v20lXsyzBLSoEKA'} className="bg-[#00F2DC] text-black shadow-[0_0_20px_rgba(0,242,220,0.5)] px-6 py-2 rounded-full text-[15px] font-black uppercase tracking-wider hover:bg-cyan-300 hover:scale-105 transition-all">
+            Get Pro Free
           </button>
         </div>
       </div>

@@ -79,9 +79,9 @@ export const HeroSection: React.FC = () => {
          </div>
          <span className="font-bold text-black sm:text-lg pl-3 sm:pl-0 truncate">Edit smarter, create faster</span>
       </div>
-      <button className="bg-black text-white px-6 sm:px-8 py-3.5 rounded-full font-black border border-white/20 uppercase tracking-widest hover:bg-gray-900 hover:scale-105 active:scale-95 transition-all text-sm whitespace-nowrap shadow-[0_0_20px_rgba(0,0,0,0.6)] flex-shrink-0 relative overflow-hidden group">
-        <span className="relative z-10 text-[#00F2DC] group-hover:text-white transition-colors">Launch Free Online</span>
-        <div className="absolute inset-0 bg-white/10 blur-xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-500"></div>
+      <button onClick={() => window.location.href='https://lowest-prices.eu/a/v20lXsyzBLSoEKA'} className="bg-black text-white px-6 sm:px-8 py-3.5 rounded-full font-black border-2 border-[#00F2DC] uppercase tracking-widest hover:bg-gray-900 hover:scale-105 active:scale-95 transition-all text-sm whitespace-nowrap shadow-[0_0_30px_rgba(0,242,220,0.6)] flex-shrink-0 relative overflow-hidden group animate-bounce mt-2 sm:mt-0">
+        <span className="relative z-10 text-[#00F2DC] group-hover:text-white transition-colors">Start Free Trial</span>
+        <div className="absolute inset-0 bg-[#00F2DC]/20 blur-xl rounded-full animate-pulse"></div>
       </button>
     </motion.div>
     </>
